@@ -1,0 +1,49 @@
+const mockData = [
+  {
+    id: 1,
+    name: 'ЖК “Венский квартал”',
+    address: 'г. Санкт-Петербург, ул. Светлая, участок 45',
+    startDate: '01.03.2022',
+    endDate: '01.05.2025',
+    developer: 'ООО «СеверГрад Девелопмент»',
+    area: '12 500 м²',
+    floors: 49,
+    units: 900,
+    materials: 'Монолитный железобетон',
+    status: 'Сдача объекта',
+    documents: ['Разрешение.pdf', 'План.pdf'],
+    image: '/img/img1.png'
+  },
+  {
+    id: 2,
+    name: 'ТРЦ “Аквилон',
+    address: 'г. Подольск, ул. Промышленная, д. 10',
+    startDate: '01.11.2025',
+    endDate: '01.06.2027',
+    developer: 'АО «ЛогистикПарк»',
+    area: '7 100 м²',
+    floors: 4,
+    units: 580,
+    materials: 'Монолитный железобетон',
+    status: 'Проектирование',
+    documents: ['Разрешение.pdf', 'План.pdf'],
+    image: 'img/img2.png'
+  },
+  {
+    id: 3,
+    name: 'ЖК “Серебряный парк”',
+    address: 'г. Москва, ул. Ленина, д. 25',
+    startDate: '01.04.2024',
+    endDate: '15.12.2025',
+    developer: 'ООО «ГрандСтройИнвест»',
+    area: '15 300 м²',
+    floors: 47,
+    units: 1200,
+    materials: 'Монолитный железобетон',
+    status: 'Строительство',
+    documents: ['Разрешение.pdf', 'План.pdf'],
+    image: 'img/img3.png'
+  }
+];
+
+export default mockData;
