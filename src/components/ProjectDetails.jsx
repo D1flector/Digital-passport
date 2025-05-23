@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/modal.css';
 
 const ProjectDetails = ({ project, onClose, onUpdate }) => {
   const [localProject, setLocalProject] = useState({ ...project });
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   const handleStatusChange = (event) => {
     setLocalProject(prev => ({ ...prev, status: event.target.value }));
