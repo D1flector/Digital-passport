@@ -1,11 +1,15 @@
 import React from 'react'
 import mockData from '../data/mockData';
 
-const ProjectCard = () => {
+const ProjectCard = ({ search }) => {
+
+  const filteredProjects = mockData.filter(project =>
+    project.name.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
           <div className='project-card'>
-          {mockData.map(project => (
+          {filteredProjects.map(project => (
             <div key={project.id} className='project-info'>
               <div className='project-details'>
                 <h3 className='project-name'>{project.name}</h3>

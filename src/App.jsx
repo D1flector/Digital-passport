@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './components/ProjectCard'
 
 function App() {
+
+  const [search, setSearch] = useState('');
+
   return (
     <div className='passport-container'>
       <header className='header'>
@@ -15,11 +18,13 @@ function App() {
             className="search-input"
             placeholder="Поиск проекта..."
             aria-label="Поиск проекта"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
           />
           <button className='add-btn'>+ Добавить новый проект</button>
         </div>
 
-        <ProjectCard />
+        <ProjectCard search={search}/>
 
       </main>
     </div>
