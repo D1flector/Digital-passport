@@ -34,6 +34,25 @@ const ProjectDetails = ({ project, onClose, onUpdate }) => {
     }));
   };
 
+  const handlePhotoUpload = (event) => {
+    const files = event.target.files;
+    if (!files.length) return;
+
+    const newPhotos = Array.from(files).map(file => URL.createObjectURL(file));
+
+    setLocalProject(prev => ({
+      ...prev,
+      photos: [...(prev.photos || []), ...newPhotos]
+    }));
+  };
+
+  const handleDeletePhoto = (photoUrl) => {
+    setLocalProject(prev => ({
+      ...prev,
+      photos: prev.photos.filter(p => p !== photoUrl)
+    }));
+  };
+
   const handleSave = () => {
     onUpdate(localProject);
     onClose();
@@ -53,17 +72,6 @@ const ProjectDetails = ({ project, onClose, onUpdate }) => {
       <p><b>Количество помещений:</b> {localProject.units}</p>
       <p><b>Материалы:</b> {localProject.materials}</p>
 
-      {localProject.photos && localProject.photos.length > 0 && (
-        <div className="photos-section">
-          <b>Фото проекта:</b>
-          <div className="photo-grid">
-            {localProject.photos.map((photo, i) => (
-              <img key={i} src={photo} alt={`Фото ${i + 1}`} />
-            ))}
-          </div>
-        </div>
-      )}
-
       <label>
         <b>Статус:</b>
         <select value={localProject.status} onChange={handleStatusChange}>
@@ -72,6 +80,28 @@ const ProjectDetails = ({ project, onClose, onUpdate }) => {
           <option>Сдача объекта</option>
         </select>
       </label>
+
+      <div className="photos-section">
+        <b>Фото проекта:</b>
+        {localProject.photos && localProject.photos.length > 0 ? (
+          <div className="photo-grid">
+            {localProject.photos.map((photo, i) => (
+              <div key={i} className="photo-wrapper">
+                <img src={photo} alt={`Фото ${i + 1}`} />
+                <button
+                  className="delete-photo-btn"
+                  onClick={() => handleDeletePhoto(photo)}
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="no-photo-text">Фотографии отсутствуют</p>
+        )}
+        <input type="file" multiple accept="image/*" onChange={handlePhotoUpload} className="photo-upload-input" />
+      </div>
 
       <div className="documents-section">
         <b>Документы:</b>

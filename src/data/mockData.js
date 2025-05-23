@@ -12,7 +12,8 @@ const mockData = [
     materials: 'Монолитный железобетон',
     status: 'Сдача объекта',
     documents: ['Разрешение.pdf', 'План.pdf'],
-    image: '/img/img1.png'
+    image: '/img/img1.png',
+    photos: ['/img/img2.png', '/img/img3.png'],
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const mockData = [
     materials: 'Монолитный железобетон',
     status: 'Проектирование',
     documents: ['Разрешение.pdf', 'План.pdf'],
-    image: 'img/img2.png'
+    image: 'img/img2.png',
+    photos: ['/img/img2.png', '/img/img3.png'],
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ const mockData = [
     materials: 'Монолитный железобетон',
     status: 'Строительство',
     documents: ['Разрешение.pdf', 'План.pdf'],
-    image: 'img/img3.png'
+    image: 'img/img3.png',
+    photos: ['/img/img2.png', '/img/img3.png'],
   }
 ];
 
