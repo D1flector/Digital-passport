@@ -46,6 +46,17 @@ const ProjectDetails = ({ project, onClose, onUpdate }) => {
       <p><b>Количество помещений:</b> {localProject.units}</p>
       <p><b>Материалы:</b> {localProject.materials}</p>
 
+      {localProject.photos && localProject.photos.length > 0 && (
+        <div className="photos-section">
+          <b>Фото проекта:</b>
+          <div className="photo-grid">
+            {localProject.photos.map((photo, i) => (
+              <img key={i} src={photo} alt={`Фото ${i + 1}`} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <label>
         <b>Статус:</b>
         <select value={localProject.status} onChange={handleStatusChange}>

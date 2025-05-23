@@ -9,23 +9,22 @@
   z-index: 999;
 }
 
-/* Само окно */
 .project-details-modal {
   position: fixed;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 600px;
   max-height: 80vh;
   overflow-y: auto;
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  box-sizing: border-box;
 }
 
-/* Кнопка закрытия */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -36,27 +35,92 @@
   cursor: pointer;
 }
 
-/* Секция документов */
+.project-details-modal h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.project-details-modal p {
+  margin: 5px 0;
+}
+
+.project-details-modal label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.project-details-modal select {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 .documents-section {
   margin-top: 20px;
 }
 
-/* Кнопка удаления документа */
+.documents-section ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.documents-section li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
 .delete-doc-btn {
   margin-left: 10px;
   color: red;
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 14px;
 }
 
-/* Кнопка сохранить */
 .save-btn {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 10px 16px;
   background-color: #0069d9;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #0053b3;
+}
+
+.photos-section {
+  margin-top: 20px;
+}
+
+.photo-grid {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-grid img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  user-select: none;
 }
