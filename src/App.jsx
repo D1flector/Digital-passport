@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import ProjectCard from './components/ProjectCard'
+import React, { useState } from 'react';
+import ProjectCard from './components/ProjectCard';
 
 function App() {
-
   const [search, setSearch] = useState('');
 
   return (
@@ -24,11 +23,10 @@ function App() {
           <button className='add-btn'>+ Добавить новый проект</button>
         </div>
 
-        <ProjectCard search={search}/>
-
+        <ProjectCard search={search} />
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

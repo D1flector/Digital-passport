@@ -1,0 +1,62 @@
+/* Фон под модальным окном */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Само окно */
+.project-details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Секция документов */
+.documents-section {
+  margin-top: 20px;
+}
+
+/* Кнопка удаления документа */
+.delete-doc-btn {
+  margin-left: 10px;
+  color: red;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Кнопка сохранить */
+.save-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #0069d9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
