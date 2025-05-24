@@ -108,7 +108,9 @@ const ProjectDetails = ({ project, onClose, onUpdate }) => {
         <ul>
           {localProject.documents.map((doc, i) => (
             <li key={i}>
-              {doc}
+              <a href={`/docs/${doc}`} download>
+                {doc}
+              </a>
               <button onClick={() => handleDeleteDocument(doc)} className="delete-doc-btn">Удалить</button>
             </li>
           ))}

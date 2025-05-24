@@ -13,7 +13,7 @@ const mockData = [
     status: 'Сдача объекта',
     documents: ['Разрешение.pdf', 'План.pdf'],
     image: '/img/img1.png',
-    photos: ['/img/img2.png', '/img/img3.png'],
+    photos: ['/img/img1.png', '/img/img2.png'],
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const mockData = [
     status: 'Проектирование',
     documents: ['Разрешение.pdf', 'План.pdf'],
     image: 'img/img2.png',
-    photos: ['/img/img2.png', '/img/img3.png'],
+    photos: ['/img/img2.png', '/img/img1.png'],
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const mockData = [
     status: 'Строительство',
     documents: ['Разрешение.pdf', 'План.pdf'],
     image: 'img/img3.png',
-    photos: ['/img/img2.png', '/img/img3.png'],
+    photos: ['/img/img2.png', '/img/img1.png'],
   }
 ];
 
