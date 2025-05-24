@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import mockData from '../data/mockData';
 import ProjectDetails from './ProjectDetails';
 
-const ProjectCard = ({ search }) => {
-  const [projects, setProjects] = useState(mockData);
+const ProjectCard = ({ search, projects, setProjects }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects = projects.filter(project =>
@@ -54,17 +52,17 @@ const ProjectCard = ({ search }) => {
         </div>
       ))}
 
-    {selectedProject && (
-      <>
-        <div className="modal-backdrop" />
-        <ProjectDetails 
-          project={selectedProject}
-          onClose={closeDetails}
-          onUpdate={updateProject}
-        />
-      </>
-    )}
-  </div>
+      {selectedProject && (
+        <>
+          <div className="modal-backdrop" />
+          <ProjectDetails 
+            project={selectedProject}
+            onClose={closeDetails}
+            onUpdate={updateProject}
+          />
+        </>
+      )}
+    </div>
   );
 };
 
