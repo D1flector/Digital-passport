@@ -11,7 +11,7 @@ function App() {
   const handleAddProject = (newProject) => {
     const maxId = projects.reduce((max, p) => (p.id > max ? p.id : max), 0);
     const projectWithId = { ...newProject, id: maxId + 1 };
-    setProjects(prev => [...prev, projectWithId]);
+    setProjects(prev => [projectWithId, ...prev]);
     setShowForm(false);
   };
 
