@@ -89,7 +89,7 @@ const AddProjectForm = ({ onAddProject, onCancel }) => {
             <input type="date" name="endDate" value={formData.endDate} onChange={handleChange} required />
           </label>
           <input type="text" name="developer" placeholder="Застройщик" onChange={handleChange} required />
-          <input type="text" name="area" placeholder="Площадь" onChange={handleChange} required />
+          <input type="number" name="area" placeholder="Площадь" onChange={handleChange} required />
           <input type="number" name="floors" placeholder="Этажность" onChange={handleChange} required />
           <input type="number" name="units" placeholder="Количество помещений" onChange={handleChange} required />
           <input type="text" name="materials" placeholder="Материалы" onChange={handleChange} required />
