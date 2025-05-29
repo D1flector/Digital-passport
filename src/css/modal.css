@@ -162,3 +162,251 @@
   margin-top: 10px;
   color: #888;
 }
+
+
+@media (max-width: 1024px) {
+  .project-details-modal {
+    width: 700px;
+    padding: 25px;
+  }
+  
+  .photo-grid img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 880px) {
+  .project-details-modal {
+    width: 600px;
+    padding: 24px;
+  }
+  
+  .photo-grid img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-details-modal {
+    top: 5%;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .close-btn {
+    top: 12px;
+    right: 16px;
+    font-size: 18px;
+  }
+  
+  .project-details-modal h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-right: 30px;
+  }
+  
+  .project-details-modal label {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  
+  .project-details-modal select {
+    margin-left: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  
+  .documents-section ul {
+    max-height: 120px;
+    padding: 8px;
+  }
+  
+  .documents-section li {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+  
+  .photo-grid {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .photo-grid img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .save-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .project-details-modal {
+    width: 95%;
+    padding: 16px;
+    top: 3%;
+    max-height: 94vh;
+  }
+  
+  .close-btn {
+    top: 10px;
+    right: 12px;
+    font-size: 16px;
+  }
+  
+  .project-details-modal h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details-modal p {
+    font-size: 14px;
+  }
+  
+  .project-details-modal label {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+  
+  .project-details-modal select {
+    margin-left: 6px;
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+  
+  .documents-section ul {
+    max-height: 100px;
+    padding: 6px;
+  }
+  
+  .documents-section li {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  
+  .delete-doc-btn {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  
+  .photo-grid {
+    gap: 6px;
+  }
+  
+  .photo-grid img {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+  }
+  
+  .delete-photo-btn {
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+    font-size: 12px;
+  }
+  
+  .photo-upload-input {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  .save-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-details-modal {
+    width: 96%;
+    padding: 14px;
+    border-radius: 12px;
+  }
+  
+  .project-details-modal h2 {
+    font-size: 16px;
+  }
+  
+  .photo-grid img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .documents-section ul {
+    max-height: 80px;
+    padding: 4px;
+  }
+  
+  .documents-section li {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-details-modal {
+    padding: 12px;
+  }
+  
+  .close-btn {
+    top: 8px;
+    right: 10px;
+    font-size: 14px;
+  }
+  
+  .project-details-modal h2 {
+    font-size: 15px;
+    padding-right: 25px;
+  }
+  
+  .photo-grid {
+    gap: 4px;
+  }
+  
+  .photo-grid img {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .delete-photo-btn {
+    width: 18px;
+    height: 18px;
+    line-height: 14px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-details-modal {
+    width: 98%;
+    padding: 10px;
+  }
+  
+  .project-details-modal h2 {
+    font-size: 14px;
+  }
+  
+  .project-details-modal p {
+    font-size: 12px;
+  }
+  
+  .photo-grid img {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .save-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
